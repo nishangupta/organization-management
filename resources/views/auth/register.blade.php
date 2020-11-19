@@ -9,11 +9,11 @@
 
           <div class="d-flex justify-content-between mb-3">
             <div class="mb-3">
-              <a href="/" class="btn"><i class="fas fa-chevron-left"></i> Go back</a>
+              <a href="/" class="btn sign-in-link"><i class="fas fa-chevron-left"></i> Go back</a>
             </div>
             <div class="">
               <p class="py-0 my-0">Already a member?</p>
-              <a href="{{route('login')}}">Login</a>
+              <a href="{{route('login')}}" class="sign-in-link">Login</a>
             </div>
           </div>
        

@@ -9,11 +9,11 @@
 
           <div class="d-flex justify-content-between mb-3">
             <div class="mb-3">
-              <a href="/" class="btn"><i class="fas fa-chevron-left"></i> Go back</a>
+              <a href="/" class="btn sign-in-link"><i class="fas fa-chevron-left"></i> Go back</a>
             </div>
             <div class="">
-              <p class="py-0 my-0">Not a member?</p>
-              <a href="{{route('register')}}">Register</a>
+              <p class="py-0 my-0 ">Not a member?</p>
+              <a href="{{route('register')}}" class="sign-in-link">Register</a>
             </div>
           </div>
        
@@ -24,7 +24,7 @@
               {{ implode('', $errors->all(':message')) }}
               </div>
           @endif
-          
+
           <form class="form-signin" action="{{route('login')}}" method="POST">
             @csrf
             <div class="form-label-group">
@@ -45,7 +45,7 @@
           </form>
           
           <div class="text-center mt-3">
-            <a href="{{route('password.request')}}">Forgot password?</a>
+            <a href="{{route('password.request')}}" class="sign-in-link">Forgot password?</a>
           </div>
         </div>
       </div>

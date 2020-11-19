@@ -9,6 +9,10 @@ class HomeController extends Controller
 {
     public function index()
     {
+        return auth()->user();
+    }
+    public function logout()
+    {
         Auth::logout();
         return redirect('/');
     }

@@ -7,9 +7,9 @@
       <div class="card card-signin my-5">
         <div class="card-body">
 
-          <div class="d-flex justify-content-between mb-5">
+          <div class="d-flex justify-content-between mb-3">
             <div class="mb-3">
-              <a href="/login" class="btn"><i class="fas fa-chevron-left"></i> Go back to login</a>
+              <a href="/login" class="btn sign-in-link"><i class="fas fa-chevron-left"></i> Go back to login</a>
             </div>
           </div>
 

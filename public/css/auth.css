@@ -44,6 +44,9 @@ body {
     color: white;
     background: #008de4;
 }
+.sign-in-link {
+    color: #00a8d1;
+}
 
 .form-label-group {
     position: relative;
