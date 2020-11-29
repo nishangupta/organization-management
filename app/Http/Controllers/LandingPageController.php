@@ -8,6 +8,7 @@ class LandingPageController extends Controller
 {
     public function index()
     {
+        //returns the landing page for app
         return view('landing-page.index');
     }
 }
