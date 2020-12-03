@@ -11,4 +11,7 @@ class LandingPageController extends Controller
         //returns the landing page for app
         return view('landing-page.index');
     }
+    public function edit(){
+        return view('landing-page.edit');
+    }
 }
