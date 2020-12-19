@@ -28,7 +28,7 @@ class RoleSeeder extends Seeder
         }
 
         $permissions = [
-            'dashboard',
+            'dashboard','view post'
         ];
         foreach ($permissions as $permission) {
             DB::table('permissions')->insert([

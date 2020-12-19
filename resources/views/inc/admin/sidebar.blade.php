@@ -135,9 +135,10 @@
     <div id="accountsCollapse" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Accounts information:</h6>
-        <a class="collapse-item" href="{route('admin.profile')}}">Profile</a>
+        <a class="collapse-item" href="{route('admin.profile')}}">Profile</a>\
         @role('admin')
         <a class="collapse-item" href="{route('userManagement.index')}}">User Management</a>
+        <a class="collapse-item" href="{route('userManagement.index')}}">Role Management</a>
         @endrole
       </div>
     </div>

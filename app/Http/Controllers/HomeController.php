@@ -11,6 +11,7 @@ class HomeController extends Controller
     {
         return auth()->user();
     }
+    
     public function logout()
     {
         Auth::logout();
