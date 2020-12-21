@@ -27,7 +27,6 @@ Route::group(['prefix'=>'/admin/role'],function(){
 
 
 Route::group(['prefix'=>'/admin'],function(){
-
   Route::resource('/task',TaskController::class);
 
 });

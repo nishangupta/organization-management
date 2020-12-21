@@ -5,6 +5,7 @@
 <div class="container-fluid">
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h4 mb-0 text-gray-800">Task Management</h1>
+    <a href="{{route('task.create')}}" class="btn btn-sm btn-primary mb-4">Add a task</a>
   </div>
 
   <div class="row">
