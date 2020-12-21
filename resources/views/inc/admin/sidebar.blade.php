@@ -29,21 +29,21 @@
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    Product Information
+    Task Information
   </div>
 
   @role('admin')
   <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item request()->segment(1) == 'product' ? 'active': ''}}">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#productsCollapse" aria-expanded="true" aria-controls="productsCollapse">
+  <li class="nav-item request()->segment(1) == 'task' ? 'active': ''}}">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#tasksCollapse" aria-expanded="true" aria-controls="tasksCollapse">
       <i class="fas fa-fw fa-th-large"></i>
-      <span>Products</span>
+      <span>Tasks</span>
     </a>
-    <div id="productsCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    <div id="tasksCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Product Bread:</h6>
-        <a class="collapse-item" href="route('product.index')}}">Manage Products</a>
-        <a class="collapse-item" href="route('product.create')}}">Add Product</a>
+        <h6 class="collapse-header">Tasks Bread:</h6>
+        <a class="collapse-item" href="route('product.index')}}">Manage Tasks</a>
+        <a class="collapse-item" href="route('product.create')}}">Add Task</a>
       </div>
     </div>
   </li>
@@ -143,6 +143,14 @@
       </div>
     </div>
   </li>
+
+  <li class="nav-item">
+    <a href="{{route('roleManagement.index')}}">Role Management</a>
+    </a>
+    <a href="{{route('roleManagement.index')}}">TaskManagement</a>
+    </a>
+  </li>
+
 
 </ul>
 <!-- End of Sidebar -->

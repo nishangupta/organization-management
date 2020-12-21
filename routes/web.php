@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\TaskController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\RoleManagementController;
@@ -22,4 +23,11 @@ Route::group(['prefix'=>'/admin/role'],function(){
   //removing permission from a role
   Route::get('{role}/permission/{permission}/revoke',
       [RoleManagementController::class,'revokePermission'])->name('roleManagement.revokePermission');
+});
+
+
+Route::group(['prefix'=>'/admin'],function(){
+
+  Route::resource('/task',TaskController::class);
+
 });

@@ -49,7 +49,7 @@
     <div class="col-sm-12 col-md-4">
       <ul class="list-group mb-2">
         <li class="list-group-item bg-primary text-white">
-          <h5>{{$role->name}} roles</h5>
+          <h5>{{$role->name}} permissions</h5>
         </li>
         <ul class="list-group small">
           @foreach($role->permissions as $permission)
