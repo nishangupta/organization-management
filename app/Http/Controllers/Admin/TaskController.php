@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Task;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class TaskController extends Controller
 {
@@ -17,8 +18,21 @@ class TaskController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'task'=>'required|min:3|max:200',
+            'title'=>'required|min:3|max:200',
+            'description'=>'nullable|min:3',
+            // 'cover'=>'sometimes|image|max:5000',
+            'privacy'=>'required'
         ]);
-        return $request->all();
+
+        Task::create([
+            'title'=>$request->title,
+            'description'=>$request->description,
+            // 'cover'=>$request->cover,
+            'privacy'=>$request->privacy ?? 'public',
+            'status'=>'ongoing',
+            'user_id'=>auth()->id(),
+        ]);
+
+        return redirect()->back();;
     }
 }
