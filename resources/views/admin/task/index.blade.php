@@ -29,6 +29,8 @@
   </div>
 
 
+  <img src="{{asset('img/task/default-task.png')}}" class="img-fluid" alt="">
+
 </div>
 @endsection  
 

@@ -3,12 +3,10 @@
 
 @section('content')
 <div class="container-fluid">
-  <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h4 mb-0 text-gray-800">Creating a new Task</h1>
-  </div>
-
   <div class="row">
-    <div class="col-xl-6 col-md-8 col-12 mb-4">
+    <div class="col-xl-6 col-md-8 col-12 mb-4 mx-auto">
+    <h1 class="h4 mb-0 text-gray-800 mb-4">Creating a new Task</h1>
+
       <x-input-error></x-input-error>
 
       <form action="{{route('task.store')}}" enctype="multipart/form-data" method="POST" id="taskForm">
@@ -47,7 +45,7 @@
             </div>
             <div class="p-1">
               <span class="text-dark h6 my-0 d-block">Private</span>
-              <small>Only you can see it ,nobody is notified</small>
+              <small>Only you can see it, nobody is notified</small>
             </div>
           </div>
         </div>
@@ -75,7 +73,6 @@
     </div>
   </div>
 
-
 </div>
 @endsection  
 
@@ -98,6 +95,7 @@
   left: 0;
   right: 0;
   width: 100%;
+  z-index: 100;
 }
 </style>
 @endpush
