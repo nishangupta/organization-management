@@ -5,7 +5,10 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xl-6 col-md-8 col-12 mb-4 mx-auto">
-    <h1 class="h4 mb-0 text-gray-800 mb-4">Creating a new Task</h1>
+      <div class="d-flex justify-content-between">
+        <h1 class="h4 mb-0 text-gray-800 mb-4">Creating a new Task</h1>
+      </div>
+
 
       <x-input-error></x-input-error>
 
@@ -45,7 +48,7 @@
             </div>
             <div class="p-1">
               <span class="text-dark h6 my-0 d-block">Private</span>
-              <small>Only you can see it, nobody is notified</small>
+              <small>Only you can see it, nobody is notified unless you add them manually</small>
             </div>
           </div>
         </div>
@@ -67,7 +70,6 @@
       <div class="submitBtn bg-white p-2 border-top">
         <div class="d-flex justify-content-center"> 
           <button id="submitTaskBtn" class="btn btn-primary mx-3">Submit</button>
-          <a href="{{route('task.index')}}" class="btn btn-info mx-3">Go back</a>
         </div>
       </div>
     </div>

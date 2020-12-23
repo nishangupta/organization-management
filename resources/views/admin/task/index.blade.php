@@ -8,28 +8,85 @@
     <a href="{{route('task.create')}}" class="btn btn-sm btn-primary mb-4">Add a task</a>
   </div>
 
-  <div class="row">
-    <div class="col-xl-12 col-md-12 mb-4">
-      <div class="row h-100">
-          {{-- @foreach($roles as $role) --}}
-          <div class="col-md-3 col-sm-6">
-            <ul class="list-group mb-2">
-              <li class="list-group-item bg-primary text-white d-flex justify-content-between">
-                <h6>{$role->name}}</h6>
-                <a href="{route('roleManagement.edit',['role'=>$role->id])}}" class="text-white"><i class="fas fa-edit"></i></a>
-              </li>
-              <ul class="list-group">
-        
-              </ul>
-            </ul>
+  <div class="card-groups">
+    <div class="row">
+      @foreach ($tasks as $task)
+      <div class="col-6 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="{{asset('img/task/default-task.png')}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{$task->title}}</h5>
+            <p class="card-text">{{$task->description}}</p>
+            <button class="btn btn-sm btn-outline-info">Private</button>
           </div>
-          {{-- @endforeach --}}
+          <div class="card-footer">
+            <small>{{$task->created_at->diffForHumans()}}</small>
+          </div>
+        </div>
+      </div>
+      @endforeach
+      
+
+      <div class="col-6 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="{{asset('img/task/default-task.png')}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="{{asset('img/task/default-task.png')}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="{{asset('img/task/default-task.png')}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="{{asset('img/task/default-task.png')}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="{{asset('img/task/default-task.png')}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-sm-6">
+        <div class="card">
+          <img class="card-img-top" src="{{asset('img/task/default-task.png')}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title that wraps to a new line</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
       </div>
     </div>
+    
   </div>
 
 
-  <img src="{{asset('img/task/default-task.png')}}" class="img-fluid" alt="">
+
 
 </div>
 @endsection  
