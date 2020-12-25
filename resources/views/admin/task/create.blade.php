@@ -9,7 +9,6 @@
         <h1 class="h4 mb-0 text-gray-800 mb-4">Creating a new Task</h1>
       </div>
 
-
       <x-input-error></x-input-error>
 
       <form action="{{route('task.store')}}" enctype="multipart/form-data" method="POST" id="taskForm">
@@ -54,7 +53,10 @@
         </div>
 
         <div class="form-group">
-          <label for="" class="text-primary mt-2">Cover for the task (Leave empty for default)</label>
+          <label for="" class="text-primary mt-4">Cover for the task (Leave empty for default)</label>
+          <div class="img-fluid py-2">
+            <img src="{{asset('img/task/default-task.png')}}" width="100px" title="Task default cover" alt="">
+          </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text">Upload</span>

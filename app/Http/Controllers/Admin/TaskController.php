@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Task;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class TaskController extends Controller
 {
@@ -21,21 +22,41 @@ class TaskController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'title'=>'required|min:3|max:200',
+            'title'=>'required|unique:tasks|min:3|max:200',
             'description'=>'nullable|min:3',
-            // 'cover'=>'sometimes|image|max:5000',
+            'cover'=>'sometimes|image|max:5000',
             'privacy'=>'required'
         ]);
 
-        Task::create([
+        $task = Task::create([
             'title'=>$request->title,
             'description'=>$request->description,
-            // 'cover'=>$request->cover,
             'privacy'=>$request->privacy ?? 'public',
             'status'=>'ongoing',
             'user_id'=>auth()->id(),
         ]);
 
+        if($request->hasFile('cover')){
+            $task->addMediaFromRequest('cover')->toMediaCollection('cover');
+        }
+
         return redirect()->back();;
+    }
+
+    public function show(Task $task){
+        $taskWithUser = $task->with('user')->get();
+        dd($taskWithUser);
+        //getting cover image
+        $cover = $task->getFirstMediaUrl('cover');
+        return view('admin.task.show')->with([
+            'task'=>$taskWithUser,
+            'cover'=>$cover
+        ]);
+    }
+
+    public function destroy($task){
+        $task->delete();
+        
+        return redirect()->route('task.index');
     }
 }

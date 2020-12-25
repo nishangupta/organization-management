@@ -4,4 +4,4 @@
           {{ $slot }}
       </div>
   </div>
-</div> <!-- end breadcrumbs -->
+</div>

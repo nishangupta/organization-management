@@ -17,7 +17,7 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->foreignId('user_id')->constained('user');
+            $table->foreignId('user_id')->constained('users');
             $table->string('privacy');
             $table->string('status');
             $table->timestamps();
